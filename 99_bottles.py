@@ -1,6 +1,9 @@
 def bottle_song(bottle = 99):
-	
-    if bottle == 1:
+    if bottle <= 0:
+        return """No more bottles of beer on the wall, no more bottles of beer.
+Go to the store and buy some more, 99 bottles of beer on the wall."""
+
+    elif bottle == 1:
         end = """1 bottle of beer on the wall, 1 bottle of beer.
 Take one down and pass it around, no more bottles of beer on the wall.
 No more bottles of beer on the wall, no more bottles of beer.
@@ -11,4 +14,4 @@ Go to the store and buy some more, 99 bottles of beer on the wall."""
     return current + bottle_song(bottle-1)
 
 
-print(bottle_song(10))
+print(bottle_song(0))
